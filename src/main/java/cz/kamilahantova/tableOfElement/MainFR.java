@@ -1,3 +1,5 @@
+package cz.kamilahantova.tableOfElement;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 

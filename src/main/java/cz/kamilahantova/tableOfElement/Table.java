@@ -1,3 +1,4 @@
+package cz.kamilahantova.tableOfElement;
 
 import java.awt.BorderLayout;
 import java.io.*;
@@ -10,9 +11,8 @@ public class Table extends JPanel {
     public Table() {
         setLayout(new BorderLayout());
         try {
-            BufferedReader bf = new BufferedReader(
-                    new FileReader(new File(Table.class.getResource("/resources").toURI())));
-            try {
+            try (BufferedReader bf = new BufferedReader(
+                    new InputStreamReader(Table.class.getResourceAsStream("/elements.txt")))) {
                 String line = bf.readLine();
                 String[] array = line.split(" ");
                 int numb = Integer.parseInt(array[2]);
@@ -22,17 +22,9 @@ public class Table extends JPanel {
                 }
 
                 this.add(new Element(array[0], array[1], numb, elektron));
-                // this.add(new Element(array[0], array[1], numb, elektron));
-            } finally {
-                bf.close();
+                // this.add(new cz.kamilahantova.tableOfElement.Element(array[0], array[1], numb, elektron));
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        } catch (URISyntaxException e) {
+        } catch (IOException | NumberFormatException e) {
             e.printStackTrace();
         }
 
