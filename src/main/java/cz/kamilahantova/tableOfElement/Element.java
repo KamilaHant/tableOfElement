@@ -1,5 +1,6 @@
+package cz.kamilahantova.tableOfElement;
+
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -22,7 +23,7 @@ public class Element extends JPanel {
 
         /*
          * try { img =
-         * ImageIO.read(Element.class.getResource("/resources/h.png")); } catch
+         * ImageIO.read(cz.kamilahantova.tableOfElement.Element.class.getResource("/resources/h.png")); } catch
          * (IOException e) { e.printStackTrace(); }
          */
     }

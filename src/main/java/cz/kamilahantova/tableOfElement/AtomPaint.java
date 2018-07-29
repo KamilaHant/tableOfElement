@@ -1,7 +1,9 @@
+package cz.kamilahantova.tableOfElement;
+
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-//public class AtomPaint extends JPanel {
+//public class cz.kamilahantova.tableOfElement.AtomPaint extends JPanel {
 public class AtomPaint {
 
     private int layer; // pocet vrstev
